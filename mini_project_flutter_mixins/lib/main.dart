@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:mini_project_flutter_mixins/user.dart';
 
 void main() {
-  runApp(const MyApp());
+  User user = User(1, 'Chiisana');
+  //user.logFootball();
+  user.printFavorite();
+  user.soundGuitar();
+  user.soundCam();
+
+  //runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
