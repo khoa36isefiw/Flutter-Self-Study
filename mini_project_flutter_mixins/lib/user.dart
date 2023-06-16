@@ -36,3 +36,9 @@ class User extends Person with Football, MusicalIntrumental, Book, Eating {
     print('Ăn gì cũng được');
   }
 }
+
+extension MyExtension on User {
+  void logMyExtension() {
+    print('Test Extension');
+  }
+}

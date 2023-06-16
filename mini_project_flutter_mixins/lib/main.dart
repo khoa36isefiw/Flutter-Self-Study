@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:mini_project_flutter_mixins/user.dart';
+import 'package:mini_project_flutter_mixins/user1.dart';
 
 void main() {
   User user = User(1, 'Chiisana');
+  User1 myUser = User1(2, 'KoiUta');
   //user.logFootball();
-  user.printFavorite();
-  user.soundGuitar();
-  user.soundCam();
+  // user.printFavorite();
+  // user.soundGuitar();
+  // user.soundCam();
+  user.logMyExtension();
+  myUser.logInformation();
 
   //runApp(const MyApp());
 }
