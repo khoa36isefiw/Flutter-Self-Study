@@ -20,6 +20,12 @@ https://www.flutterbeads.com/button-with-icon-and-text-flutter/
 
 # GUI for this Mini Project
 ![Alt text](image-1.png)
+# Some kind of buttons that I use in this project:
+1. FloatingActionButton
+2. TextButton
+3. ElevatedButton
+4. OutlinedButton
+5. ClipOval
 
 # Hold in Button Buy
 - We get two results:
@@ -34,6 +40,7 @@ https://www.flutterbeads.com/button-with-icon-and-text-flutter/
 # Toast Message 
 var snackBar = const SnackBar(
     content: Text('Message In Here ...'));
+    
 ScaffoldMessenger.of(context).showSnackBar(snackBar);
 
 
