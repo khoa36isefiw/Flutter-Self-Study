@@ -20,9 +20,11 @@ samples, guidance on mobile development, and a full API reference.
 
 # Hold in Button Buy
 - We get two results:
-     + onTap
+     # + onTap
+     
      ![Alt text](image-2.png)
-     + onLongTap - Press this button more 2 seconds
+    # + onLongTap - Press this button more 2 seconds
+   
      ![Alt text](image-3.png)
 
 
