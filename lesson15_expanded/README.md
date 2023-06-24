@@ -6,5 +6,5 @@
 
 
 - Expanded following Row 
-<img src="https://github.com/khoa36isefiw/Flutter-Self-Study/assets/97817877/d5fa31b8-e183-4ca5-9ffa-6ba69bcf28ca" width="400" height="600”>
+<img src="https://github.com/khoa36isefiw/Flutter-Self-Study/assets/97817877/d5fa31b8-e183-4ca5-9ffa-6ba69bcf28ca" width="400" height="700”>
 
