@@ -16,16 +16,16 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 # Change the icon for App
 - You can access this link to generate different app icon sizes for all platforms: https://www.appicon.co/
-
+```
 - First add to dependencies:
 dev_dependencies:
-  flutter_test:
+  flutter_test: 
     sdk: flutter
 
-  flutter_lints: ^2.0.0
+  flutter_lints: ^2.0.0 
   flutter_launcher_icons: "^0.13.1" # add this line to dependencies
 
-- Second at these lines
+- Second add these lines:
 flutter_icons:
   image_path: "assets/images/ic_giyuu.png"  # path of image
   android: true
@@ -34,13 +34,16 @@ flutter_icons:
 - Run this script to change the default icon of App
     flutter pub get
     flutter pub run flutter_launcher_icons:main
-
+```
 - Result: 
-    "✓ Successfully generated launcher icons"
+    "✓ Successfully generated launcher icons" <br>
+    
     ![Alt text](image-1.png)
 
 # UI of this App
-- Main UI when you open this app
-![Alt text](image-2.png)
-- Click into ChatBox or some folders below will move you to another activity
+- Main UI when you open this app <br>
+  <img src="image-2.png" alt="Alt text" width="400" height="700">
+
+- Click into ChatBox or some folders below will move you to another activity <br>
+  
 ![Alt text](image-4.png)
