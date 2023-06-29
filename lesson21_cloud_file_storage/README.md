@@ -42,8 +42,9 @@ flutter_icons:
 
 # UI of this App
 - Main UI when you open this app <br>
-  <img src="image-2.png" alt="Alt text" width="400" height="700">
+  <img src="image-2.png" alt="Alt text" width="400" height="800">
 
 - Click into ChatBox or some folders below will move you to another activity <br>
+  <img src="image-4.png" alt="Alt text" width="400" height="800">
+
   
-![Alt text](image-4.png)
