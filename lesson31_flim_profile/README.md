@@ -37,7 +37,7 @@ Design Film Profile - Characters designed by me I was inspired by the Kimetsu no
 
 ```
  Text(
-    'Something at here...'
+    'Something at here...',
     style: TextStyle(
       color: Colors.grey,
       height: 1.4,
