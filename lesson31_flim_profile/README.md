@@ -1,18 +1,48 @@
 # lesson31_flim_profile
+Design Film Profile - Characters designed by me I was inspired by the Kimetsu no Yaiba - movie Mugen Train
 
-A new Flutter project.
+[<img src="assets/screenshot/img_introduce.jpg" width="250">](assets/screenshot/img_introduce.jpg)
+[<img src="assets/screenshot/img_video_1.jpg" width="250">](assets/screenshot/img_video_1.jpg)
+[<img src="assets/screenshot/img_video_2.jpg" width="250">](assets/screenshot/img_video_2.jpg)
+<br>
 
-## Getting Started
+## Note Source Code
+- 'Align' here will be at half of its parents width
+  ```
+  Widget makeVideo({image}) {
+    return AspectRatio(
+      // widget's width will be 1.5 times its height
+      aspectRatio: 1.5 / 1,
+      child: Container(
+        //...
+        ),
+        child: Container(
+          //...
+          ),
+          child: const Align(
+            child: Icon(
+              Icons.play_arrow,
+              color: Colors.white,
+              size: 70,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+  
+  ```
 
-This project is a starting point for a Flutter application.
+- For me: To justify the TEXT
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-[![img_introduce.jpg](assets/screenshot/img_introduce.jpg)](assets/screenshot/)
+```
+ Text(
+    'Something at here...'
+    style: TextStyle(
+      color: Colors.grey,
+      height: 1.4,
+    ),
+    // căn đều 2 bên
+    textAlign: TextAlign.justify,  // remember this line
+  ),
+```
