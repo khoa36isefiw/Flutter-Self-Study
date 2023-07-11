@@ -1,4 +1,4 @@
-# lesson36_party_event
+# GUI Design Party Event 
 Design Party Event Application
 
 ### Screenshot
