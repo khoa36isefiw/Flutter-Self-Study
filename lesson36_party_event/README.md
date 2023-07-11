@@ -1,5 +1,5 @@
 # lesson36_party_event
-Design Party Event Applicaton
+Design Party Event Application
 
 ### Screenshot
 [<img src="assets/screenshot/img_mintro.png" width="250">](assets/screenshot/img_mintro.png)
