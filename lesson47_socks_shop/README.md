@@ -35,6 +35,7 @@ Desgin Socks Shop Application GUI
         ],
     ),
 ```
+
     - flex: 4 is used for the first child widget (a piece of text) and flex: 3 for the second child widget (an image)
 
 - Move to another Activity
@@ -54,7 +55,7 @@ Desgin Socks Shop Application GUI
     - When user click into Card Item. It will move user to View Detail Socks
     ```
      _makeSocksCard(
-        context: context,
+        context: context,    // para to move ViewSocks
         startColor: const Color.fromRGBO(203, 251, 255, 1),
         endColor: const Color.fromRGBO(81, 223, 234, 1),
         image: 'img_socks_1.webp',
