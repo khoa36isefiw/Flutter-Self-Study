@@ -8,7 +8,8 @@ Desgin Socks Shop Application GUI
 
 ### Note Source Code
 - Flex: flex is used to divide the free space between two child widgets. The flex property is used in a Row or Column widget to determine the proportion of space between the child widgets.
-
+    - flex: 4 is used for the first child widget (a piece of text)
+    -  flex: 3 for the second child widget (an image)
 ```
     Row(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -34,9 +35,10 @@ Desgin Socks Shop Application GUI
             ),
         ],
     ),
+
 ```
 
-    - flex: 4 is used for the first child widget (a piece of text) and flex: 3 for the second child widget (an image)
+
 
 - Move to another Activity
     - I use GestureDetector and pass in the parameter 'context' and animation PageTransition 
