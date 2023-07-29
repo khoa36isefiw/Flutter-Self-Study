@@ -14,6 +14,8 @@ class _Bottom_NavigationState extends State<Bottom_Navigation> {
     return Container(
       color: Colors.black,
       child: BottomNavigationBar(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         currentIndex: index,
         onTap: (value) {
           index = value;
@@ -53,11 +55,38 @@ class _Bottom_NavigationState extends State<Bottom_Navigation> {
           ),
           // notifcation
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.notification_add,
-              color: index == 3
-                  ? Colors.orange
-                  : Colors.grey.shade600.withOpacity(0.6),
+            icon: Stack(
+              children: [
+                Icon(
+                  Icons.notifications,
+                  color: index == 3
+                      ? Colors.orange
+                      : Colors.grey.shade600.withOpacity(0.6),
+                ),
+                Positioned(
+                  top: 0,
+                  right: 0,
+                  child: Container(
+                    padding: EdgeInsets.all(1),
+                    decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                    constraints: BoxConstraints(
+                      minWidth: 12,
+                      minHeight: 12,
+                    ),
+                    child: Text(
+                      '1',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 8,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ],
             ),
             label: 'Notification',
           ),
