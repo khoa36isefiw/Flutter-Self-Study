@@ -9,7 +9,7 @@ Desgin Coffee Shop GUI
 [<img src="assets/screenshot/img_coffee_detail_rengoku.jpg" width="250">](assets/screenshot/img_coffee_detail_rengoku.jpg)
 
 ### Note Source Code  
-- Make a notification for icon in the position of top right
+- Make a notification for the icon in the position of the top right
 ```
  Stack(
     children: [
@@ -58,7 +58,9 @@ Desgin Coffee Shop GUI
         } 
         ```
         - Secondly, Create Navigation bar contains dots following horizontal direction
-        Widget _makeNav() {
+
+      ```
+       Widget _makeNav() {
             return Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -67,6 +69,7 @@ Desgin Coffee Shop GUI
                 ],
             );
         }
+       ```
         - Finally, Create container to call back _makeNav functiom 
         ```
         Container(
