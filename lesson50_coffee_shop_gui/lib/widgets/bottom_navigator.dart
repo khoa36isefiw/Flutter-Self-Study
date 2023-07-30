@@ -65,24 +65,29 @@ class _Bottom_NavigationState extends State<Bottom_Navigation> {
                 ),
                 Positioned(
                   top: 0,
-                  right: 0,
+                  right: 2,
                   child: Container(
-                    padding: EdgeInsets.all(1),
+                    padding: EdgeInsets.all(2),
                     decoration: BoxDecoration(
                       color: Colors.red,
                       borderRadius: BorderRadius.circular(6),
                     ),
-                    constraints: BoxConstraints(
-                      minWidth: 12,
-                      minHeight: 12,
-                    ),
-                    child: Text(
-                      '1',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 8,
+
+                    // child: Text(
+                    //   '1',
+                    //   style: TextStyle(
+                    //     color: Colors.white,
+                    //     fontSize: 8,
+                    //   ),
+                    //   textAlign: TextAlign.center,
+                    // ),
+                    child: Container(
+                      width: 4,
+                      height: 4,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        color: Colors.red,
                       ),
-                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),
