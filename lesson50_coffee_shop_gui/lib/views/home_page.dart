@@ -108,6 +108,8 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                           const SizedBox(height: 5),
+                          // make what is the category choose
+                          // if it is choose --> must get value true in CATEGORY
                           Container(
                             width: 5,
                             height: 5,
@@ -128,6 +130,7 @@ class _HomePageState extends State<HomePage> {
             ),
             const SizedBox(height: 20),
 
+            // Pick image
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
@@ -180,6 +183,7 @@ class _HomePageState extends State<HomePage> {
                                             // make rating
                                             // set position for this container
                                             Align(
+                                              // including: Star and number of rating
                                               alignment: Alignment.topRight,
                                               child: Container(
                                                 height: 25,

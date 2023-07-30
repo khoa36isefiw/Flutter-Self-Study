@@ -63,6 +63,7 @@ class _Bottom_NavigationState extends State<Bottom_Navigation> {
                       ? Colors.orange
                       : Colors.grey.shade600.withOpacity(0.6),
                 ),
+                // make postion for it
                 Positioned(
                   top: 0,
                   right: 2,

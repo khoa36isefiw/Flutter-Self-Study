@@ -11,7 +11,7 @@ class Details extends StatefulWidget {
 }
 
 class _DetailsState extends State<Details> {
-  // size of coffee
+  // size of coffee: small, medium, large
   var s = false;
   var m = false;
   var l = false;
