@@ -72,32 +72,62 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 25),
             // list of item to choose
             Container(
-              height: 30,
+              height: 40,
               child: ListView.builder(
                 // number of list item wanna display
                 itemCount: 5,
-                scrollDirection: Axis.horizontal,
+                scrollDirection: Axis.horizontal, // direction when users scroll
                 itemBuilder: (context, index) {
-                  return GestureDetector(
+                  // return GestureDetector(
+                  return SizedBox(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
                         horizontal: 10,
                       ),
-                      child: Text(
-                        names[index],
-                        style: TextStyle(
-                          color: category[index]
-                              ? Colors.orange
-                              : Colors.white.withOpacity(.4),
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      // child: Text(
+                      //   names[index],
+                      //   style: TextStyle(
+                      //     color: category[index]
+                      //         ? Colors.orange
+                      //         : Colors.white.withOpacity(.4),
+                      //     fontSize: 17,
+                      //     fontWeight: FontWeight.bold,
+                      //   ),
+                      // ),
+                      // create a dot below the item if it is chose
+                      child: Column(
+                        children: [
+                          Text(
+                            names[index],
+                            style: TextStyle(
+                              color: category[index]
+                                  ? Colors.orange
+                                  : Colors.white.withOpacity(.4),
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(height: 5),
+                          Container(
+                            width: 5,
+                            height: 5,
+                            margin: EdgeInsets.only(right: 5),
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: category[index]
+                                  ? Colors.orange
+                                  : Colors.transparent,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   );
                 },
               ),
             ),
+            const SizedBox(height: 20),
+
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
@@ -107,9 +137,10 @@ class _HomePageState extends State<HomePage> {
                       height: 250,
                       width: double.infinity,
                       child: ListView.builder(
-                        itemCount: 9,
+                        itemCount: 9, // loop 9 times
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) {
+                          // move to details page when click on image item
                           return InkWell(
                             onTap: () {
                               Navigator.push(
@@ -125,9 +156,7 @@ class _HomePageState extends State<HomePage> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20),
                               ),
-                              margin: const EdgeInsets.only(
-                                right: 15,
-                              ),
+                              margin: const EdgeInsets.only(right: 15),
                               child: Container(
                                 padding: const EdgeInsets.all(10),
                                 width: 160,
