@@ -2,11 +2,7 @@
 Desgin Coffee Shop GUI
 
 ### Screenshot
-[<img src="assets/screenshot/img_list_coffe1.jpg.jpg" width="250">](assets/screenshot/img_list_coffe1.jpg.jpg)
-[<img src="assets/screenshot/img_recommend_coffe.jpg" width="250">](assets/screenshot/img_recommend_coffe.jpg)
-[<img src="assets/screenshot/img_coffe_detials_cappuccino.jpg" width="250">](assets/screenshot/img_coffe_detials_cappuccino.jpg)
-[<img src="assets/screenshot/img_coffee_details.jpg" width="250">](assets/screenshot/img_coffee_details.jpg)
-[<img src="assets/screenshot/img_coffee_detail_rengoku.jpg" width="250">](assets/screenshot/img_coffee_detail_rengoku.jpg)
+![Alt text](assets/screenshot/img_cofffee_shop.jpg)
 
 ### Note Source Code  
 - Make a notification for the icon in the position of the top right
