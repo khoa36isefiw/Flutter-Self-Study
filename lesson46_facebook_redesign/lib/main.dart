@@ -132,11 +132,73 @@ class _RedesignFacebookState extends State<RedesignFacebook> {
                     const SizedBox(
                       height: 20,
                     ),
+                    // make region for user Post
+                    // include: userImage, inputTextFied and icon Button Image
+                    SizedBox(
+                      height: 65,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            width: 50,
+                            height: 50,
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.blueAccent,
+                              image: DecorationImage(
+                                image: AssetImage(
+                                  'assets/images/img_rengoku_back.jpeg',
+                                ),
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            height: 50,
+                            width: MediaQuery.of(context).size.width - 160,
+                            decoration: BoxDecoration(
+                              color: Colors.grey.shade200,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: const Center(
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  hintText: 'What\'s on your mind?',
+                                  border: InputBorder.none,
+                                ),
+                              ),
+                            ),
+                          ),
+                          // add Icon Button Add Image
+                          const SizedBox(width: 20),
+                          Center(
+                            child: Container(
+                              height: 40,
+                              width: 40,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                // color: Colors.amber,
+                                image: const DecorationImage(
+                                  image: AssetImage(
+                                    'assets/images/ic_add_image.png',
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    _makeDivingLine(context),
+                    const SizedBox(height: 30),
                     Container(
                       height: 180,
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: [
+                          // need to make user post includes: userImage, textField to write content and image
                           _createStory(
                             userImage: 'img_canada.jpg',
                           ),
@@ -164,8 +226,13 @@ class _RedesignFacebookState extends State<RedesignFacebook> {
                       ),
                     ),
                     const SizedBox(
+                      height: 10,
+                    ),
+                    _makeDivingLine(context),
+                    const SizedBox(
                       height: 40,
                     ),
+
                     _makeStatusInformation(
                       userName: 'Akaza',
                       userImage: 'img_bong_rox.jpeg',
@@ -232,6 +299,16 @@ class _RedesignFacebookState extends State<RedesignFacebook> {
     );
   }
 
+  Container _makeDivingLine(BuildContext context) {
+    return Container(
+      height: 6,
+      width: MediaQuery.of(context).size.width,
+      decoration: const BoxDecoration(
+        color: Colors.grey,
+      ),
+    );
+  }
+
   Container _makeHeaderIcon({icon}) {
     return Container(
       margin: const EdgeInsets.only(
@@ -273,6 +350,7 @@ class _RedesignFacebookState extends State<RedesignFacebook> {
             children: [
               Row(
                 children: [
+                  // this container uses for userImage
                   Container(
                     width: 50,
                     height: 50,
@@ -291,6 +369,7 @@ class _RedesignFacebookState extends State<RedesignFacebook> {
                   const SizedBox(
                     width: 10,
                   ),
+                  // include: userName and post update time
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -319,6 +398,7 @@ class _RedesignFacebookState extends State<RedesignFacebook> {
                   ),
                 ],
               ),
+              // make icon to display more information
               IconButton(
                 onPressed: () {},
                 icon: const Icon(Icons.more_horiz),
@@ -329,6 +409,7 @@ class _RedesignFacebookState extends State<RedesignFacebook> {
           const SizedBox(
             height: 20,
           ),
+          // content of the post
           Text(
             feedText,
             // 'You must become the demon Kyoujurou',
@@ -344,7 +425,8 @@ class _RedesignFacebookState extends State<RedesignFacebook> {
           ),
           //feed Image - maybe post or not
           // edit it later
-          feedImage != ''
+          feedImage != '' // check if feedImage is not Null/ String
+              // --> display image and open the image when user click on this image
               // ? Container(
               //     height: 300,
               //     decoration: BoxDecoration(
@@ -373,6 +455,7 @@ class _RedesignFacebookState extends State<RedesignFacebook> {
                       ),
                     );
                   },
+                  // container for image
                   child: Container(
                     height: 300,
                     decoration: BoxDecoration(
@@ -387,13 +470,13 @@ class _RedesignFacebookState extends State<RedesignFacebook> {
                 )
               : Container(),
           // make like/love button and number of comment
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              // for like and love button
+              // for like and love button, laugh
               Row(
                 children: [
                   // make like
@@ -401,11 +484,15 @@ class _RedesignFacebookState extends State<RedesignFacebook> {
 
                   // make love
                   Transform.translate(
-                    offset: Offset(-5, 0),
+                    //displacement in the direction x: -5 - move to the right side
+                    offset: const Offset(-5, 0),
                     child: _makeLoveNumber(),
                   ),
                   Transform.translate(
-                    offset: Offset(-10, 0),
+                    //move to the right side: 10
+                    offset: const Offset(-10, 0),
+                    // check is isLaugh == true --> display icon Laugh button
+                    // else nothing
                     child: isLaugh ? _makeLaughNumber() : Container(),
                   ),
 
@@ -423,6 +510,7 @@ class _RedesignFacebookState extends State<RedesignFacebook> {
                   ),
                 ],
               ),
+              // make number of comments
               Text(
                 feedNumberOfComment + ' Comments',
                 // '2 Comments',
@@ -433,6 +521,7 @@ class _RedesignFacebookState extends State<RedesignFacebook> {
               ),
             ],
           ),
+          // Button Like, Comment and share
           const SizedBox(
             height: 20,
           ),
@@ -440,7 +529,7 @@ class _RedesignFacebookState extends State<RedesignFacebook> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               // make button like
-              isChoose
+              isChoose // set if isChoose ==true --> button like will active
                   ? _makeButtonLike(
                       isActive: true,
                     )
@@ -480,18 +569,19 @@ class _RedesignFacebookState extends State<RedesignFacebook> {
       width: 25,
       height: 25,
       decoration: BoxDecoration(
-        color: Colors.red,
+        // color: Colors.red,
         shape: BoxShape.circle,
         border: Border.all(
           color: Colors.white,
         ),
-        image: DecorationImage(
+        image: const DecorationImage(
           image: AssetImage('assets/images/ic_laughing.png'),
         ),
       ),
     );
   }
 
+// button like
   Container _makeLikeNumber() {
     return Container(
       width: 25,
@@ -531,6 +621,7 @@ class _RedesignFacebookState extends State<RedesignFacebook> {
           Icon(
             Icons.thumb_up,
             size: 18,
+            // if isActive will have color Blue esle default color is grey
             color: isActive ? Colors.blue : Colors.grey,
           ),
           const SizedBox(
@@ -619,6 +710,7 @@ class _RedesignFacebookState extends State<RedesignFacebook> {
     return AspectRatio(
       aspectRatio: 1.6 / 2,
       child: Container(
+        // this container contains the large image outside - stories are updated
         margin: const EdgeInsets.only(
           right: 10,
         ),
@@ -646,20 +738,23 @@ class _RedesignFacebookState extends State<RedesignFacebook> {
               begin: Alignment.bottomRight,
             ),
           ),
+          // this column contains: userImage and userName
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
+              // make container has shape circle for userImage
               Container(
                 height: 40,
                 width: 40,
                 decoration: BoxDecoration(
-                  shape: BoxShape.circle,
+                  shape: BoxShape.circle, // make Container like circle
+                  // make border for this container if user is active
                   border: Border.all(
                     color: Colors.blue,
                     width: 2,
                   ),
-                  // User Image
+                  // Add User Image into Container
                   image: DecorationImage(
                     image: AssetImage(
                       // 'assets/images/img_rengoku_ruc_chay.jpegimg_rengoku_ruc_chay.jpeg',
@@ -669,11 +764,17 @@ class _RedesignFacebookState extends State<RedesignFacebook> {
                   ),
                 ),
                 // status online or offline
+                // make a dot to represent user is active
                 child: Stack(
                   children: [
                     Positioned(
+                      // these values are at bottomRight
                       bottom: 0,
                       right: 0,
+                      // top: 0,
+                      // left: 0, // will fill full Container
+
+                      // make a circle
                       child: Container(
                         width: 10,
                         height: 10,
@@ -735,14 +836,17 @@ AspectRatio _createStory({userImage}) {
             begin: Alignment.bottomRight,
           ),
         ),
+        // create button add story for user
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            // adjust center
             Center(
+              // make container to contains icon "Add New Story"
               child: Container(
                 margin: const EdgeInsets.only(top: 50),
-                width: 50,
-                height: 50,
+                width: 40,
+                height: 40,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: Colors.blue.shade200,
@@ -758,7 +862,7 @@ AspectRatio _createStory({userImage}) {
               ),
             ),
             const SizedBox(
-              height: 10,
+              height: 5,
             ),
             const Text(
               'Create\nStory',
@@ -767,7 +871,7 @@ AspectRatio _createStory({userImage}) {
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.center, // adjust text in center
             ),
           ],
         ),
