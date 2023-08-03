@@ -2,8 +2,8 @@
 Redesign Facebook Application GUI with Flutter
 
 ### Screenshot
-[<img src="assets/screenshot/img_facebook_1.jpg" width="250">](assets/screenshot/img_facebook_1.jpg)
-[<img src="assets/screenshot/img_facebook_2.jpg" width="250">](assets/screenshot/img_facebook_2.jpg)
+[<img src="assets/screenshot/img_redesign_facebook.jpg" width="250">](assets/screenshot/img_redesign_facebook.jpg)
+[<img src="assets/screenshot/img_redesign_facebook_2.jpg" width="250">](assets/screenshot/img_redesign_facebook_2.jpg)
 
 ### Note Source Code
 - Make Icon in a Circle
