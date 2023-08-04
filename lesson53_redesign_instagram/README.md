@@ -2,9 +2,17 @@
 Create Following Members in Instagram
 
 
-### Screenshot
+## Screenshot
+
+### Following Page 
 [<img src="assets/screenshot/img_insta_1.jpg" width="250">](assets/screenshot/img_insta_1.jpg)
 [<img src="assets/screenshot/img_insta_2.jpg" width="250">](assets/screenshot/img_insta_2.jpg)
+[<img src="assets/screenshot/img_insta_3.jpg" width="250">](assets/screenshot/img_insta_3.jpg)
+
+### Members Page
+[<img src="assets/screenshot/img_member_1.jpg" width="250">](assets/screenshot/img_member_1.jpg)
+[<img src="assets/screenshot/img_member_2.jpg" width="250">](assets/screenshot/img_member_2.jpg)
+[<img src="assets/screenshot/img_member_3.jpg" width="250">](assets/screenshot/img_member_3.jpg)
 
 ### Note Source Code
 - Make Pop Menu when Click on the icon more information
@@ -36,3 +44,4 @@ Create Following Members in Instagram
         },
         ),
 ```
+
