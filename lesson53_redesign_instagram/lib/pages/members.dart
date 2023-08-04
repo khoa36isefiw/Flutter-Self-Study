@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../models/user.dart';
 
 class MembersPage extends StatefulWidget {
-  const MembersPage({super.key});
+  const MembersPage({Key? key}) : super(key: key);
 
   @override
   State<MembersPage> createState() => _MembersPageState();
@@ -36,9 +36,16 @@ class _MembersPageState extends State<MembersPage>
       'assets/images/img_rengoku_ruc_chay.jpeg',
       false,
     ),
+    User(
+      'Kamado Tanjiro',
+      '@tanjiro',
+      'assets/images/img_tanjiro.png',
+      false,
+    ),
   ];
 
   List<User> _selectedUsers = [];
+  // save state of an AnimatedListState
   final GlobalKey<AnimatedListState> listKey = GlobalKey<AnimatedListState>();
   final GlobalKey<AnimatedListState> selectedListKey =
       GlobalKey<AnimatedListState>();
@@ -74,7 +81,7 @@ class _MembersPageState extends State<MembersPage>
               child: Column(
                 children: [
                   const Text(
-                    'Selects Members',
+                    'Select Members',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -82,10 +89,12 @@ class _MembersPageState extends State<MembersPage>
                   ),
                   const SizedBox(height: 20),
                   Expanded(
+                    /// Creates a scrolling container that animates items when they are inserted
+                    /// or removed.
                     child: AnimatedList(
                       scrollDirection: Axis.horizontal,
-                      initialItemCount: _selectedUsers.length,
                       key: selectedListKey,
+                      initialItemCount: _selectedUsers.length,
                       itemBuilder: (context, index, animation) {
                         return _selectedUsersComponent(
                           user: _selectedUsers[index],
@@ -118,7 +127,11 @@ class _MembersPageState extends State<MembersPage>
     );
   }
 
-  _selectedUsersComponent({required User user, index, animation}) {
+  Widget _selectedUsersComponent({
+    required User user,
+    required int index,
+    required Animation<double> animation,
+  }) {
     return FadeTransition(
       opacity: animation,
       child: Container(
@@ -132,9 +145,7 @@ class _MembersPageState extends State<MembersPage>
                 borderRadius: BorderRadius.circular(50),
                 color: Colors.green.shade600,
                 image: DecorationImage(
-                  image: AssetImage(
-                    user.image,
-                  ),
+                  image: AssetImage(user.image),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -146,7 +157,7 @@ class _MembersPageState extends State<MembersPage>
                 onTap: () {
                   listKey.currentState?.insertItem(
                     _user.length,
-                    duration: Duration(milliseconds: 500),
+                    duration: const Duration(milliseconds: 500),
                   );
                   selectedListKey.currentState?.removeItem(
                     index,
@@ -155,11 +166,13 @@ class _MembersPageState extends State<MembersPage>
                       index: index,
                       animation: animation,
                     ),
-                    duration: Duration(milliseconds: 300),
+                    duration: const Duration(milliseconds: 300),
                   );
 
-                  _selectedUsers.remove(user);
-                  _user.add(user);
+                  setState(() {
+                    _selectedUsers.remove(user);
+                    _user.add(user);
+                  });
                 },
                 child: Container(
                   width: 25,
@@ -174,20 +187,10 @@ class _MembersPageState extends State<MembersPage>
                   ),
                   child: const Icon(
                     Icons.close,
-                    size: 18,
+                    size: 16,
+                    color: Colors.white,
                   ),
                 ),
-              ),
-            ),
-            SizedBox(height: 30),
-            Expanded(
-              child: AnimatedList(
-                key: listKey,
-                initialItemCount: _user.length,
-                itemBuilder: (context, index, animation) {
-                  return userComponent(
-                      user: _user[index], index: index, animation: animation);
-                },
               ),
             ),
           ],
@@ -202,7 +205,7 @@ class _MembersPageState extends State<MembersPage>
         setState(
           // update new state
           () {
-            // check if the length of array > 3 then return - do not do something below
+            // check if the length of array > 3
             if (_selectedUsers.length > 3) return;
 
             // case: Choose less than 3
