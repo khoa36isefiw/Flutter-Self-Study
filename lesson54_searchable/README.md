@@ -34,7 +34,7 @@ onSearch(String searchValue) {
     }
   }
 ```
-- Slidable: scroll Widget follows the horizontal axis (left and right) and can do actions on its. And here I used it to display list of Users 
+- Slidable: scroll Widget follows the horizontal axis (left and right) and can do actions on it. And here I used it to display a list of Users 
     -  Set how it big by actionExtentRatio
     ```
         actionExtentRatio: 0.25,
@@ -43,7 +43,7 @@ onSearch(String searchValue) {
     ```
       actionPane: const SlidableDrawerActionPane(),
     ```
-    - Scroll from left to right axis standard by actions
+    - Scroll from left to right axis represents actions
     ```
         actions: <Widget>[
             // a list of Actions
@@ -59,7 +59,7 @@ onSearch(String searchValue) {
            //...
         ],
     ```
-    - Scroll from right to left axis standard by secondaryActions
+    - Scroll from right to left axis represents secondaryActions
     ```
         secondaryActions: [
             IconSlideAction(
