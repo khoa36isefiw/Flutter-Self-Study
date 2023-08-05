@@ -15,7 +15,7 @@ Create Verify OTP Code GUI
 [<img src="assets/screenshot/img_verify_successfully.jpg" width="250">](assets/screenshot/img_verify_successfully.jpg)
 
 ### Note Source Code 
-- Create button: there is white above the button and another color at the bottom
+- Create button: there is white above the button and another color at the bottom <br>
 [<img src="assets/screenshot/img_button.jpg" width="250">](assets/screenshot/img_button.jpg) <br>
 ```
  Container(
