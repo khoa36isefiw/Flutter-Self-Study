@@ -56,7 +56,7 @@ class _OTPValidationState extends State<OTPValidation> {
     //to repeat an action after each defined interval.
     // interval here is 4 miliSeconds
     const oneSecond = Duration(seconds: 4);
-    _timer = new Timer.periodic(oneSecond, (timer) {
+    _timer = Timer.periodic(oneSecond, (timer) {
       setState(() {
         //stop showing loading status
         _isLoading = false;
@@ -124,21 +124,6 @@ class _OTPValidationState extends State<OTPValidation> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // Container(
-              //   width: 300,
-              //   height: 300,
-              //   decoration: BoxDecoration(
-              //     shape: BoxShape.circle,
-              //     color: Colors.grey.shade200,
-              //     // borderRadius: BorderRadius.circular(50),
-              //     image: DecorationImage(
-              //       image: AssetImage(
-              //         'assets/images/img_rengoku_back.jpeg',
-              //       ),
-              //       fit: BoxFit.cover,
-              //     ),
-              //   ),
-              // ),
               Container(
                 width: 300,
                 height: 300,
@@ -325,6 +310,30 @@ class _OTPValidationState extends State<OTPValidation> {
                                   fontSize: 18,
                                 ),
                               ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 50),
+              Container(
+                padding: EdgeInsets.only(top: 3, left: 3),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  border: Border.all(color: Colors.black),
+                ),
+                child: MaterialButton(
+                  onPressed: () {},
+                  color: Colors.blueAccent.shade400,
+                  minWidth: double.infinity, // another size
+                  height: 50,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  child: Text(
+                    'Rengo',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
                   ),
                 ),
               ),

@@ -16,7 +16,7 @@ Create Verify OTP Code GUI
 
 ### Note Source Code 
 - Create button: there is white above the button and another color at the bottom
-
+[<img src="assets/screenshot/img_button.jpg" width="250">](assets/screenshot/img_button.jpg) <br>
 ```
  Container(
     padding: EdgeInsets.only(top: 3, left: 3),
@@ -34,7 +34,7 @@ Create Verify OTP Code GUI
         borderRadius: BorderRadius.circular(50),
       ),
       child: Text(
-        'Verify',
+        'Rengo',
         style: TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 18,
