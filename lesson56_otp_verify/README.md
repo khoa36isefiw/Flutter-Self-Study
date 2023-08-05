@@ -2,15 +2,15 @@
 Create Verify OTP Code GUI
 
 ### Screenshot
-- Main GUI 
+- Main GUI <br>
 [<img src="assets/screenshot/img_verify_gui.jpg" width="250">](assets/screenshot/img_verify_gui.jpg)
 
-- Resend Code OTP  Successfully
+- Resend Code OTP  Successfully <br>
 [<img src="assets/screenshot/img_verify_resendCode.jpg" width="250">](assets/screenshot/img_verify_resendCode.jpg)
 
-- Verify and Loading 
+- Verify and Loading <br>
 [<img src="assets/screenshot/img_verify_loading.jpg" width="250">](assets/screenshot/img_verify_loading.jpg)
 
-- Verify Code Successfully
+- Verify Code Successfully <br>
 [<img src="assets/screenshot/img_verify_successfully.jpg" width="250">](assets/screenshot/img_verify_successfully.jpg)
 
