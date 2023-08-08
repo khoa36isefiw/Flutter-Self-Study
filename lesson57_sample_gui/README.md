@@ -1,9 +1,9 @@
 # lesson57_sample_gui
 Some Flutter examples
 ### Bouncing 
-- A widget that enables you make bouncing animation on your buttons after you click on it.
+- A widget that enables you make bouncing animation on your buttons after you click on it. <br>
 [<img src="assets/screenshot/img_bouncing_click.jpg" width="250">](assets/screenshot/img_bouncing_click.jpg)
-[<img src="assets/screenshot/img_bouncing_waiting_animation.jpg" width="250">](assets/screenshot/img_bouncing_waiting_animation.jpg)
+[<img src="assets/screenshot/img_bouncing_waiting_animation.jpg" width="250">](assets/screenshot/img_bouncing_waiting_animation.jpg) <br>
 
 - Scale factor
     -  < 0 => the bouncing will be reversed and widget will grow
@@ -175,9 +175,9 @@ floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       ),
 
 ```
-- When we use shape: CircularNotchedRectangle(),
+- When we use shape: CircularNotchedRectangle(), <br>
 [<img src="assets/screenshot/img_navigation_bottom_bar_default.jpg" width="250">](assets/screenshot/img_navigation_bottom_bar_default.jpg) <br>
-- When we use shape: AutomaticNotchedShape(). We must design something in this function
+- When we use shape: AutomaticNotchedShape(). We must design something in this function <br>
 [<img src="assets/screenshot/img_navigation_bottom_bar_design.jpg" width="250">](assets/screenshot/img_navigation_bottom_bar_design.jpg) <br>
     - Notes: At this function has 2 para: host and guest
         - Host: must not be null
