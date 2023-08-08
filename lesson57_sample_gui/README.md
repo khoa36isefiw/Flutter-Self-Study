@@ -193,7 +193,6 @@ floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
                 Radius.circular(50),
             ),
         ),
-
         /// -------- Host always flying above/ front of guest ------------
         // guest  -> may be not null
         // make border Radius for the space below Icon in centerDocked
@@ -204,3 +203,10 @@ floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         ),
     ),
 ```
+
+### Bottom Navy
+[<img src="assets/screenshot/img_navy_home.jpg" width="250">](assets/screenshot/img_navy_home.jpg)
+[<img src="assets/screenshot/img_navy_message.jpg" width="250">](assets/screenshot/img_navy_message.jpg)
+[<img src="assets/screenshot/img_navy_settings.jpg" width="250">](assets/screenshot/img_navy_settings.jpg)
+[<img src="assets/screenshot/img_navy_user.jpg" width="250">](assets/screenshot/img_navy_user.jpg)
+
