@@ -226,3 +226,46 @@ animated_button: ^0.2.0
 [<img src="assets/screenshot/img_circle_button.jpg" >](assets/screenshot/img_circle_button.jpg)
 - Circle Button with notifications is defined 
 [<img src="assets/screenshot/img_button_with_notifi.jpg" >](assets/screenshot/img_button_with_notifi.jpg)
+
+    - Source code
+      ```
+               Container(
+                    width: 50,
+                    height: 50,
+                    // color: Colors.blueAccent,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                      color: Colors.green,
+                    ),
+                    child: Stack(
+                      children: [
+                        const Center(
+                          child: Icon(
+                            Icons.notifications_outlined,
+                            color: Colors.white,
+                            size: 30,
+                          ),
+                        ),
+                        Positioned(
+                          right: 0,
+                          top: 0,
+                          child: Container(
+                            width: 15,
+                            height: 15,
+                            decoration: BoxDecoration(
+                              color: Colors.amber,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                            child: const Center(
+                              child: Text(
+                                '1',
+                                style: TextStyle(fontSize: 10),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+      ```
+      
