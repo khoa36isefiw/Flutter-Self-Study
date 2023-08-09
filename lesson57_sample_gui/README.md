@@ -210,3 +210,19 @@ floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 [<img src="assets/screenshot/img_navy_settings.jpg" width="250">](assets/screenshot/img_navy_settings.jpg)
 [<img src="assets/screenshot/img_navy_user.jpg" width="250">](assets/screenshot/img_navy_user.jpg)
 
+### Animated Button
+- Add to dependencies:
+```
+animated_button: ^0.2.0
+```
+[<img src="assets/screenshot/img_animated_button.jpg" width="250">](assets/screenshot/img_animated_button.jpg)
+
+### Sample Button
+- Elevated and Outlined Button <br>
+[<img src="assets/screenshot/img_elevated_outlined_button.jpg" >](assets/screenshot/img_elevated_outlined_button.jpg)
+- Elevated Button with Icon <br>
+[<img src="assets/screenshot/img_elevated_button.jpg" >](assets/screenshot/img_elevated_button.jpg)
+- Circle Button with notifications <br>
+[<img src="assets/screenshot/img_circle_button.jpg" >](assets/screenshot/img_circle_button.jpg)
+- Circle Button with notifications is defined 
+[<img src="assets/screenshot/img_button_with_notifi.jpg" >](assets/screenshot/img_button_with_notifi.jpg)

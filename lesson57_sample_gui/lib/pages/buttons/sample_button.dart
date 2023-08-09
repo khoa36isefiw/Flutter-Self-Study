@@ -8,10 +8,11 @@ class SimpleButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ThemeData currentTheme = Theme.of(context);
     return Scaffold(
       backgroundColor: Colors.grey.shade600,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 40),
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -29,7 +30,7 @@ class SimpleButtons extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   SimpleElevatedButton(
-                    color: Colors.blue,
+                    color: Colors.amber,
                     onPressed: () {},
                     child: const Text('Elevated Button'),
                   ),
@@ -46,7 +47,13 @@ class SimpleButtons extends StatelessWidget {
                 children: [
                   SimpleElevatedButton(
                     color: Colors.green,
-                    onPressed: () {},
+                    onPressed: () {
+                      // current.
+                      print(
+                        // this is bar color: 0xff2196f3
+                        currentTheme.primaryColor,
+                      );
+                    },
                     child: const Text('Elevated Button'),
                   ),
                   SimpleOutlinedButton(
@@ -61,7 +68,7 @@ class SimpleButtons extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   SimpleElevatedButton(
-                    color: Colors.amber,
+                    // color: Colors.amber,
                     onPressed: () {},
                     child: const Text('Elevated Button'),
                   ),
@@ -92,8 +99,8 @@ class SimpleButtons extends StatelessWidget {
                   ),
                   const SizedBox(height: 12),
                   SimpleElevatedButtonWithIcon(
-                    label: const Text('Warning!'),
                     iconData: Icons.warning_amber_outlined,
+                    label: const Text('Warning!'),
                     color: Colors.amber,
                     onPressed: () {},
                   ),
@@ -244,10 +251,10 @@ class SimpleButtons extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(width: 10),
+                  SizedBox(width: 40),
                   Container(
-                    width: 70,
-                    height: 70,
+                    width: 60,
+                    height: 60,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
                       color: Colors.amberAccent.shade700,
@@ -256,9 +263,9 @@ class SimpleButtons extends StatelessWidget {
                       children: [
                         Center(
                           child: Icon(
-                            Icons.message,
+                            Icons.update_outlined,
                             color: Colors.white,
-                            size: 50,
+                            size: 35,
                           ),
                         ),
                         Positioned(

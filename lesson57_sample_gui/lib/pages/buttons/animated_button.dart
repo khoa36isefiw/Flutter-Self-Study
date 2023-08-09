@@ -1,6 +1,7 @@
 import 'package:animated_button/animated_button.dart';
 import 'package:flutter/material.dart';
 
+//animated_button: ^0.2.0
 class AnimatedButtonsExample extends StatefulWidget {
   const AnimatedButtonsExample({Key? key}) : super(key: key);
 
@@ -13,20 +14,13 @@ class _AnimatedButtonsExampleState extends State<AnimatedButtonsExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.grey.shade400,
         elevation: 0,
-        title: Column(
-          children: [
-            Text(
-              'Animated Buttons',
-              style: TextStyle(
-                color: Colors.black,
-              ),
-            ),
-            SizedBox(
-              height: 2,
-            ),
-          ],
+        title: Text(
+          'Animated Buttons',
+          style: TextStyle(
+            color: Colors.black,
+          ),
         ),
       ),
       body: Container(
@@ -35,8 +29,9 @@ class _AnimatedButtonsExampleState extends State<AnimatedButtonsExample> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             AnimatedButton(
+              color: Colors.deepOrange,
               child: Text(
-                'Simple button',
+                'Animated button',
                 style: TextStyle(
                   fontSize: 22,
                   color: Colors.white,
@@ -44,6 +39,26 @@ class _AnimatedButtonsExampleState extends State<AnimatedButtonsExample> {
                 ),
               ),
               onPressed: () {},
+              duration: 20,
+              height: 70,
+              shadowDegree: ShadowDegree.dark,
+            ),
+            const SizedBox(height: 30),
+            AnimatedButton(
+              color: Colors.yellowAccent,
+              onPressed: () {},
+              height: 100,
+              child: Center(
+                child: Text(
+                  'Circle',
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 22,
+                  ),
+                ),
+              ),
+              shape: BoxShape.circle,
             ),
           ],
         ),
